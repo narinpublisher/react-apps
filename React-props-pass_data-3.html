@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>React props</title>
+	<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>	
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>	
+    <header id="root"></header>	
+	<!------------------------>
+	<script type="text/babel">
+	function Election(props){
+		return <h2>{props.garbage.box}{props.garbage.action} 후회하게 된다.</h2>
+	}
+
+	function Rigged() {
+		const talk = {box:"쓰레기통 ", action:"뒤지며 "}
+		return (
+			<>
+				부정선거  결국<br />
+				 <Election  garbage={talk} />
+			</>
+		)
+	}
+
+	ReactDOM.render(<Rigged />, document.getElementById('root'));
+	</script>
+  </body>
+</html>

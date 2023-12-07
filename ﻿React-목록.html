@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>﻿﻿React 목록</title>
+	<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>	
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>	
+    <header id="root"></header>	
+	<!------------------------>
+	<script type="text/babel">
+		function Rigged(props) {
+			return <li>기필코! <b className="red">{ props.election }</b></li>;
+		}
+
+		function RiEl() {
+			const items = ['실시간', 'CCTV', '공개하라'];
+			return (
+				<>
+					<h1>자유민주주의를 지키려면?</h1>
+					<ul>
+						{items.map((ele) => <Rigged election={ele} />)}
+					</ul>
+				</>
+			);
+		}
+		ReactDOM.render(<RiEl />, document.getElementById('root'));
+	</script>
+  </body>
+</html>

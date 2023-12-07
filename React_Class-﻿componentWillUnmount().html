@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>React Class ﻿componentWillUnmount()</title>
+	<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>	
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>	
+    <header id="root"></header>	
+	<!------------------------>
+	<script type="text/babel">
+	class Rigged extends React.Component {
+		constructor(props) {
+			super(props);
+			this.state={ show: true };
+		}
+		delTxt = () => {
+			this.setState({show: false});
+		}
+		render() {
+			let riggedElection;
+			if(this.state.show){
+				riggedElection = <Child />;
+			}
+			return (
+				<h2>
+					부정선거 만만하게 봤다간 결국<br />
+					{ riggedElection }
+					<button type="button" onClick={this.delTxt}>글자 삭제하기</button>
+				</h2>
+			)
+		}
+	}
+
+	class Child extends React.Component {
+		componentWillUnmount(){
+			alert("riggedElection 이라는 콤포넌트는 마운트 해제되었습니다.");
+		}
+		render(){
+			return (
+				<h2>
+					<b className="red">쓰레기통 </b>  
+					뒤지며 살게 된다.
+				</h2>
+			)
+		}
+	}
+	ReactDOM.render(<Rigged />, document.getElementById('root'));
+	</script>
+  </body>
+</html>

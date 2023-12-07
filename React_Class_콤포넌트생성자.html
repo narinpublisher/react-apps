@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>React 콤포넌트 생성자  -  Component Constructor</title>
+	<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>	
+    <header id="root"></header>	
+	<!------------------------>
+	<script type="text/babel">
+	class Free  extends React.Component {
+	  constructor(){
+		  super();
+		  this.state = {nation : "국민 주권"};
+	  }
+	  render() {
+		return <h2>자유 대한민국 {this.state.nation} 지켜내자!</h2>;
+	  }
+	}
+
+	ReactDOM.render(<Free />, document.getElementById('root'));
+	</script>
+  </body>
+</html>

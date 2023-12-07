@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>React props</title>
+	<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>	
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>	
+    <header id="root"></header>	
+	<!------------------------>
+	<script type="text/babel">
+	function Election(props){
+		return <h2><i className="red">{props.garbage}</i>  뒤지며 연명하게 된다.</h2>
+	}
+
+	function Rigged() {
+		return (
+			<>
+				부정선거 만만하게 봤다간 결국<br />
+				<Election garbage="쓰레기통" />
+			</>
+		)
+	}
+
+	ReactDOM.render(<Rigged />, document.getElementById('root'));
+	</script>
+  </body>
+</html>

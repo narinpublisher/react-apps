@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>﻿React 이벤트 추가</title>
+	<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>	
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>	
+    <header id="root"></header>	
+	<!------------------------>
+	<script type="text/babel">
+	function Rigged() {
+		const defeat = ()=> {
+			alert("부정선거 척결하여 자유민주주의 지켜내자!");
+		}
+		return (
+			<button onClick={defeat}>부정선거 어떻하지?</button>
+		)
+	}
+
+	ReactDOM.render(<Rigged />, document.getElementById('root'));
+	</script>
+  </body>
+</html>
