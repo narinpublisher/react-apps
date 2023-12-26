@@ -12,8 +12,8 @@
 	<!------------------------>
 	<script type="text/babel">
 	function MonumentTree() {
-		const silence = (x,y)=> {
-			alert(y.type + "이벤트 정답은?\n" + x);
+		const silence = (sil,ev)=> {
+			alert(ev.type + " 이벤트 정답은?\n" + sil);
 		}
 		return (
 			<button onClick={
