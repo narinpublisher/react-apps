@@ -13,32 +13,32 @@
     <header id="root"></header>	
 	<!------------------------>
 	<script type="text/babel">
-	function Election(props) {
-		const r = props.rigged;
-		return (
-			<section>
-				<h1>투표에서 개표까지</h1>
-				{
-						abolition.length >= 4 &&
-						<h3>
-						<ol>
-								<li>
-										 <em className="red">사전투표 폐지하라!</em>									 
-								</li>
-								<li>실시간 CCTV 허용하라!</li>
-								<li>전자 투개표를 금지{abolition[3]}</li>
-								<li>큐알코드를 금지{abolition[3]}</li>
-						</ol>
-										이상 {abolition.length}가지가 관철되어야 공정한 {abolition[1]}
-										가 될 수 있다.
-						</h3>
-				}
-			</section>
-		)
-	}
-	const abolition = ['부정','선거','척결','하라.'];  //g.length는 4
-	ReactDOM.render(<Election r={abolition} />, 
-	document.getElementById('root'));
+		function Election(props) {
+			const r = props.rigged;
+			return (
+				<section>
+					<h1>투표에서 개표까지</h1>
+					{
+							abolition.length > 4 &&
+							<h3>
+							<ol>
+									<li>
+											 <em className="red">사전투표 폐지하라!</em>									 
+									</li>
+									<li>실시간 CCTV 허용하라!</li>
+									<li>전자 투개표를 금지{abolition[3]}</li>
+									<li>큐알코드를 금지{abolition[3]}</li>
+							</ol>
+											이상 {abolition.length}가지가 관철되어야 공정한 {abolition[1]}
+											가 될 수 있다.
+							</h3>
+					}
+				</section>
+			)
+		}
+		const abolition = ['부정','선거','척결','하라.'];  //g.length는 4
+		ReactDOM.render(<Election r={abolition} />, 
+		document.getElementById('root'));
 	</script>
   </body>
 </html>
