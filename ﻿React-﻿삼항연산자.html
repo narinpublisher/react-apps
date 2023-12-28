@@ -11,24 +11,25 @@
     <header id="root"></header>	
 	<!------------------------>
 	<script type="text/babel">
-	function Rigged() {	
-		return <h1>실시간 CCTV를 방송하라!!!</h1>
-	}
-	function Election() {	
-		return (
-			<h1>투표에서 개표까지</h1>
-		)
-	}
-	function RiEl(p){
-		const ri= p.re;
-		return (
-			<section>
-				{ri ? <Rigged/>:<Election/>}
-			</section>
-		)
-	}
-	ReactDOM.render(<RiEl re={false} />, 
-	document.getElementById('root'));
+		function BlueSky() {	
+			return ( 
+				<p>파란하늘 파란하는<br />꿈이 드리운 푸른언덕에</p>
+			)
+		}
+		function BabyGoat() {	
+			return (
+				<p>아기염소 여럿이 풀을 뜯고 놀아요<br />해처럼 밝은 얼굴로 </p>
+			)
+		}
+		function BlBa(para){
+			const bl= para.bb;
+			return (
+				<section id='tomato'>
+					{bl ? <BlueSky /> : <BabyGoat />}
+				</section>
+			)
+		}
+		ReactDOM.render(<BlBa bb={ false } />, document.getElementById('root'));
 	</script>
   </body>
 </html>
