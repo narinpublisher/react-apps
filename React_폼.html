@@ -3,29 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>﻿﻿React 목록키</title>
-	<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>	
-	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>	  
+	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>	  
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>	 
 	<link href= 'myStyle.css' rel='stylesheet'>
   </head>
   <body>	
     <header id="root"></header>	
 	<!------------------------>
 	<script type="text/babel">
-  function Sunset() {
-  	const [name, setName] = useState("");
-  	
-    return (
-      <section>
-  	    <strong>바람이 머물다 간 들판에<br />모락 모락 피어나는 저녁 연기</strong>
-  			<br /><br />
-  	    <form>
-  				<label>
-  					이 동요의 제목은? &nbsp;
-  					<input type="text" value={name} 
-                        onChange={(e) => setName(e.target.value)}/>
-  				</label>
-  			</form>
+	const { useState } = React;
+ 	function Sunset() {
+  	const [name, setName] = useState("");  	
+   	 return (
+  	    <section>
+  	  	 <strong>바람이 머물다 간 들판에<br />모락 모락 피어나는 저녁 연기</strong>
+  		<br /><br />
+  	  	<form>
+  			<label>
+  				이 동요의 제목은? &nbsp;
+  				<input type="text" value={name} 
+                 	       onChange={(e) => setName(e.target.value)}/>
+  			</label>
+  	  	</form>
       </section>
     );
   }
