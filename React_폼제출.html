@@ -13,28 +13,28 @@
 	<!------------------------>
 	<script type="text/babel">
 	const { useState } = React;
-function Rigged() {
-	const [name, setName] = useState("");	
-	const submitGo = (event) => {
-		event.preventDefault();
-		alert(`고객님이 입력한 이름은 ${name} 입니다.`);
+	function Sunset() {
+		const [name, setName] = useState("");
+		const submitGo = (event) => {
+			event.preventDefault();
+			alert(`입력하신 제목은 ${ name } 입니다.`);
+		}
+	  return (
+	    <section>
+		    <strong>바람이 머물다 간 들판에<br />모락 모락 피어나는 저녁 연기</strong>
+				<br /><br />
+		    <form onSubmit = { submitGo }>
+					<label>
+						이 동요의 제목은? &nbsp;
+						<input type="text" value={ name } 
+	                      onChange={(e) => setName(e.target.value) } />
+					</label>&nbsp;
+					<button>전송하기</button>
+				</form>
+	    </section>
+	  );
 	}
-	
-  return (
-    <section>
-	    <h1>자유민주주의를 지키려면?</h1>
-	    <form onSubmit = {submitGo}>
-				<label>
-					이름을 입력하세요 &nbsp;
-					<input type="text" value={name} 
-                     onChange={(e) => setName(e.target.value)}/>
-				</label>&nbsp;
-				<button>전송하기</button>
-			</form>
-    </section>
-  );
-}
-ReactDOM.render(<Rigged />, document.getElementById('root'));  
+	ReactDOM.render(<Sunset />, document.getElementById('root'));  
 	</script>
   </body>
 </html>
