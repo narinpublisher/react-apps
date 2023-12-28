@@ -1,7 +1,10 @@
 .skyblue {
 	color:skyblue;
 }
-
+.hide {
+	list-style:none;
+	padding:0;
+}
 section {
 	display:inline-block;
 	border:2px dashed #ddd;
