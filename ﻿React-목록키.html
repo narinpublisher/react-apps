@@ -11,26 +11,32 @@
     <header id="root"></header>	
 	<!------------------------>
 	<script type="text/babel">
-		function Rigged(props) {
-			return <li>기필코! <b className="red">{ props.election }</b></li>;
+		function Children(pro) {
+		  return (
+			<li>						
+				<b className="skyblue">{ pro.rain1 } { pro.rain2 }</b> &#9748;
+			</li>
+		  )	
 		}
-
-		function RiEl() {
-			const items = [
-											{id:1, el:"실시간"},
-											{id:2, el:"CCTV"},
-											{id:3, el:"공개하라"}
-										]
-			return (
-				<section>
-					<h1>자유민주주의를 지키려면?</h1>
-					<ul>
-						{items.map((ele) => <Rigged key={ele.id} election={ele.el}  />)}
-					</ul>
-				</section>
-			);
+		
+		function App () {
+		  const items = [
+				{ id: 1,   txt:   ') 빗방울이 뚝뚝뚝 떨어지는 날에는' } ,
+				{ id: 2,   txt:   ') 잔뜩 찡그린 얼굴로' } ,
+				{ id: 3,   txt:   ') 엄마찾아 음매 아빠찾아 음매' } ,
+				{ id: 4,   txt:   ') 울상을 짖다가' }
+		];
+		  return (
+			<section>
+				<h2>동요_ 아기염소</h2>
+				<ul class='hide'>
+					{items.map((song) => 
+					<Children  key = { song.id } rain1 =  { song.id } rain2 = { song.txt } />)}
+				</ul>
+			</section>
+		  );
 		}
-		ReactDOM.render(<RiEl />, document.getElementById('root'));
+		ReactDOM.render(<App />, document.getElementById('root'));          
 	</script>
   </body>
 </html>
