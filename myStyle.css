@@ -3,6 +3,11 @@ section {
 	border:2px dashed #ddd;
 	padding:10px;
 }
+#tomato {
+	display:inline-block;
+	border:2px dashed tomato;
+	padding:10px 30px;
+}
 .orange {
   color: orange;
 }
