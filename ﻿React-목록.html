@@ -11,22 +11,30 @@
     <header id="root"></header>	
 	<!------------------------>
 	<script type="text/babel">
-		function Rigged(props) {
-			return <li>기필코! <b className="red">{ props.election }</b></li>;
+		function Children(pro) {
+		  return (
+				<li>						
+					<b className="skyblue">{ pro.rain }</b> &#9748;
+				</li>
+			)	
 		}
-
-		function RiEl() {
-			const items = ['실시간', 'CCTV', '공개하라'];
-			return (
+		
+		function App () {
+		  const items = ['빗방울이 뚝뚝뚝 떨어지는 날에는', 
+				 '잔뜩 찡그린 얼굴로', 
+				 '엄마찾아 음매 아빠찾아 음매',
+				 '울상을 짖다가'
+		];
+		  return (
 				<>
-					<h1>자유민주주의를 지키려면?</h1>
+					<h2>동요_ 아기염소</h2>
 					<ul>
-						{items.map((ele) => <Rigged election={ele} />)}
+						{items.map((song) => <Children rain = { song } />)}
 					</ul>
 				</>
-			);
+		  );
 		}
-		ReactDOM.render(<RiEl />, document.getElementById('root'));
+		ReactDOM.render(<App />, document.getElementById('root'));
 	</script>
   </body>
 </html>
