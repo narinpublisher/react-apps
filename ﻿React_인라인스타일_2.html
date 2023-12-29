@@ -11,23 +11,25 @@
     <header id="root"></header>	
 	<!------------------------>
 	<script type="text/babel">
-		const StyleObject = () => {
-			const blueStyle = {
-				color:'white',
-				backgroundColor:'dodgerBlue',
-				padding:'20px',
-				fontFamily:'cursive'
-			}
-			
-			return (
-				<section>
-					<h1 style ={blueStyle}>인라인 스타일 - 스크립트 객체</h1>
-					<p>﻿style 정보를 사용하여 객체를 생성하고 인라인 스타일 속성에서 참조할 수 있습니다.</p>
-				</section>
-			)
-		}
-
-		ReactDOM.render(<StyleObject />,document.getElementById('root'));
+	const StyleObject = () => {
+		const blueStyle = {
+			color: 'white',
+			backgroundColor: 'skyblue',
+			padding: '20px',
+			fontFamily: 'cursive' ,
+			textShadow: '1px 1px 10px blue',
+			borderRadius: '20px'
+		}		
+		return (
+			<section>
+				<h1 style ={blueStyle}>인라인 스타일 - 스크립트 객체</h1>
+				<p>﻿style 정보를 사용하여 객체를 생성하고
+	            인라인 스타일 속성에서 참조할 수 있습니다.</p>
+			</section>
+		)
+	}
+	
+	ReactDOM.render(<StyleObject />,document.getElementById('root'));
 	</script>
   </body>
 </html>
