@@ -1,2 +1,42 @@
-.red {color: red;}
-.aqua {color:aqua; text-shadow:1px 1px 3px black;}
+section {
+	display:inline-block;
+	border:2px dashed #ddd;
+	padding:10px;
+}
+
+.skyblue {
+	color:skyblue;
+}
+.hide {
+	list-style:none;
+	padding:0;
+}
+
+#tomato {
+	display:inline-block;
+	border:2px dashed tomato;
+	padding:10px 30px;
+}
+.orange {
+  color: orange;
+}
+.red {
+	color:red; 
+	font-size:1.2rem;
+}
+.brown {
+	color:brown;
+}
+span {
+	display:block;
+	font-size:1rem; 
+	font-weight:normal;
+	color:gray;
+	padding-right:10px;
+	text-align:right;
+}
+.yellowgreen {
+	color:yellowgreen;
+	font-weight:bold;
+	text-align:left;
+}
