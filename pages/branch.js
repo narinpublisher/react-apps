@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>﻿﻿React 폼제출</title>
+	  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/6.21.1/react-router-dom.development.js" crossorigin></script>
+  	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  	<link href= 'myStyle.css' rel='stylesheet'>
+    </head>
+    <body>	
+    <header id="root"></header>	
+  	<!------------------------>
+  	<script type="text/babel">
+    	const { useState } = React;
+      function Rigged() {
+      	const [inputs, setInputs] = useState({});  	
+      	const submitGoGo = (event) => {
+      			const name =  event.target.name;
+      			const value = event.target.value;
+      			setInputs(values => ({...values, [name]: value}))
+      	} 	
+      	const submitGo = (ev) => {
+      			ev.preventDefault();
+      			console.log(inputs);
+      	}  	
+        return (
+          <section>
+      	    <h1>가곡_ 비목</h1>
+      	    <form onSubmit = {submitGo}>									
+      					<input type="text" name="txt1" value={inputs.txt1 || ""} onChange = {submitGoGo} />
+      				  <br />깊은 계곡 양지 녘에<br/>					
+      					<input type="text" name="txt2" value={inputs.txt2 || ""} onChange = {submitGoGo} />
+      				  <br />이름 모를 비목이여<br/>
+      				<button>전송하기</button>
+      			</form>
+          </section>
+        );
+      }
+      ReactDOM.render(<Rigged />, document.getElementById('root'));
+	  </script>
+  </body>
+</html>
