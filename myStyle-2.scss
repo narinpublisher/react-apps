@@ -1,0 +1,5 @@
+$purpleBg: purple;
+$rainbowBG: linear-gradient(orange,yellowgreen);
+
+section {background:$rainbowBG; padding:30pt;}
+h1 {color:$purpleBg;}
