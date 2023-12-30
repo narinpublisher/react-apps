@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>﻿﻿React 폼제출</title>
+	<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>	  
+	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>	  
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>	 
+	<link href= 'myStyle-2.scss' rel='stylesheet/scss'>
+  </head>
+  <body>	
+    <header id="root"></header>	
+	<!------------------------>
+	<script type="text/babel">
+  const { useState } = React;
+  function MyCoat() {
+    const [color, setColor] = useState("검정색");      
+    return (
+      <section style={{textAlign:'center'}}>
+        <h1>이번에 새로 산 코트 색상은 { color }입니다.</h1>
+        <button type="button" onClick={() => setColor("검정색")}>
+        검정색</button>&nbsp;
+        <button type="button" onClick={() => setColor("갈색")}>
+        갈색</button>&nbsp;
+        <button  type="button"  onClick={() => setColor("파란색")}>
+        파란색</button>&nbsp;
+        <button  type="button"  onClick={() => setColor("초록색")}>
+        초록색</button>
+      </section>
+    );
+  }  
+  ReactDOM.render(<MyCoat />, document.getElementById('root'));
+	</script>
+  </body>
+</html>
